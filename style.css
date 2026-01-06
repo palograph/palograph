@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0e0e0e;
+  color: white;
+}
+
+.container {
+  max-width: 640px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* espace vertical entre les éléments dans le container */
+}
+
+/* Ajuste l’espace sous le texte avant les pictogrammes */
+.container p {
+  margin-top: 0;        /* pas de marge au-dessus */
+  margin-bottom: 8px;   /* petit espace sous le texte */
+}
+
+
+.card-container {
+  display: flex;              /* aligne les boutons sur une ligne */
+  justify-content: flex-start;    /* centre horizontalement */
+  gap: 8px;                  /* espace entre les boutons */
+  margin-top: 8px;           /* espace au-dessus du bloc */
+  flex-wrap: wrap;            /* passe en colonne sur petit écran */
+}
+
+.card {
+  width: 40px;               /* largeur fixe du bouton */
+  height: 40px;              /* hauteur fixe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: transform 0.2s ease, background 0.2s ease;
+  padding: 4px
+
+    display: flex;
+  flex-direction: column;
+  align-items: center;     /* centre horizontalement */
+  text-align: center;   
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background: #2a2a2a;  
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card span {
+  display: block;
+  padding: 12px;
+  font-size: 14px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+h1 {
+  font-size: 50px;    /* plus gros que le texte et les sous-titres */
+  font-weight: bold;  /* gras */
+  margin-top: 0;      /* optionnel : réduit l’espace au-dessus */
+  margin-bottom: 16px;/* espace entre le h1 et le texte qui suit */
+  color: white;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 16px;    /* espace au-dessus */
+  margin-bottom: 4px;  /* réduit l’espace sous le h2 */
+  color: white;
+}
+
+.three-links {
+  display: flex;              /* aligne les liens sur une ligne */
+  justify-content: center;    /* centre horizontalement */
+  gap: 16px;                  /* espace entre chaque lien */
+  margin-top: 32px;           /* espace par rapport au bloc précédent */
+  flex-wrap: wrap;            /* passe en colonne sur petits écrans */
+}
+
+.link-card {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #1a1a1a;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.link-card:hover {
+  transform: scale(1.05);
+}
+
+.site-preview {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  transition: transform 0.25s ease; /* animation douce */
+}
+
+.site-preview:hover {
+  transform: scale(1.02); /* augmentation légère */
+}
+
+.site-preview img {
+  width: 100%;
+  display: block;
+}
+
+.site-preview .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: white;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;  /* hauteur calculée automatiquement */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+.profile-row {
+  display: flex;
+  justify-content: flex-start; /* aligné à gauche */
+  margin: 12px 0 8px;          /* espace maîtrisé */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1a1a1a;
+}
+
+
